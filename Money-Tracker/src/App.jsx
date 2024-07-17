@@ -8,7 +8,7 @@ function App() {
   const [description, setDescription]= useState("");
 
   const addTransaction = () => {
-
+    
   }
 
   return (
