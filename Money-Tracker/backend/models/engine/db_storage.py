@@ -32,7 +32,10 @@ class DBStorage:
     def close(self):
         self.__session.close()
 
-    def get(self, cls, id=None):
+    def get(self, cls, id=None, email=None):
         if cls in classes:
-            return classes[cls].query.get(id)
+            if id:
+                return classes[cls].query.get(id)
+            elif email:
+                return classes[cls].query.filter_by(email=email).first()
         return None

@@ -30,7 +30,7 @@ class BaseModel:
         storage.new(self)
         storage.save()
 
-    def delete_from_db(self):
+    def delete(self):
         from models import storage
         storage.delete(self)
         storage.save()
