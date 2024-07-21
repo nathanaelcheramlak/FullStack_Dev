@@ -14,5 +14,7 @@ PASSWORD = getenv("PASSWORD")
 HOST = getenv("HOST")
 DATABASE = getenv("DATABASE")
 
+app.config["SQLALCHEMY_DATABASE_URI"] = f'mysql+mysqldb://{DB_USER}:{PASSWORD}@{HOST}:3306/{DATABASE}'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-
+db = SQLAlchemy(app)

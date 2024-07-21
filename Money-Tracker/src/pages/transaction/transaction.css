@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+.transaction-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.transaction-main .balance {
+  font-size: 5rem;
+}
+
+.transaction-main .balance span {
+  font-size: 3rem;
+  color: greenyellow;
+}
+
+.transaction-main form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 2px solid green;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+}
+
+.transaction-main form input {
+  height: 40px;
+  min-width: 200px;
+  padding: 1rem;
+  margin: 0.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.transaction-main form button {
+  height: 40px;
+  border-radius: 0.5rem;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.transaction-main .transactions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  min-width: 500px;
+  max-width: 70%;
+}
+
+.transaction-main .transactions h2 {
+  font-size: 2rem;
+  align-self: flex-start;
+}
+
+.transaction-main .transaction {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.25s;
+}
+
+.transaction-main .transaction:hover {
+  background-color: #333;
+}
+
+.transaction-main .transaction .left {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-main .transaction .right-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.transaction-main .transaction p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.transaction-main .transaction small {
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
+  color: #bbb;
+}
+
+.green {
+  color: rgb(15, 192, 15);
+}
+.red {
+  color: rgb(254, 6, 6);
+}
+
+.transaction-main .transaction-options {
+  display: flex;
+  width: 100%;
+  margin-top: 0.5rem;
+  transition: all 0.3s;
+}
+
+.transaction-main .transaction-options button {
+  outline: none;
+  border: none;
+  width: 50%;
+  padding: 0.4rem 0.45rem;
+  margin: 0.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+#edit-btn {
+  padding-left: 0.6rem;
+}
+#edit-btn:hover {
+  background-color: greenyellow;
+}
+
+.transaction-main .transaction-options button:hover {
+  background-color: rgb(218, 31, 31);
+}

@@ -3,3 +3,9 @@ mysqlclient
 flask
 flask_SQLAlchemy
 flask_cors
+flask-login
+flask-sqlalchemy
+
+# Frontend
+npm install react-icons
+npm install react-router-dom

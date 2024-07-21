@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;1,100;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-wrapper {
+  background-color: hsla(0, 0%, 20%, 0.7);
+  width: 336px;
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  padding: 24px 36px;
+}
+
+.login-wrapper > h2 {
+  text-align: center;
+  font-size: 29px;
+  margin-bottom: 20px;
+}
+
+.login-wrapper .form {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin: 24px 0;
+}
+
+.login-wrapper .form input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(179, 30%, 40%);
+  border-radius: 10px;
+  padding: 16px 40px 16px 16px;
+  font-size: 13px;
+}
+
+.login-wrapper .form input:focus {
+  border-color: hsl(180, 100%, 39%);
+}
+
+.login-wrapper .form .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  font-size: 13px;
+  color: hsl(179, 30%, 40%);
+}
+
+.login-wrapper button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: hsl(84, 100%, 35%);
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.login-wrapper button:hover {
+  background-color: hsl(84, 100%, 60%);
+}
+
+.login-wrapper .create-account {
+  font-size: 12px;
+  text-align: center;
+  margin: 16px 0 12px;
+}
+
+.login-wrapper .create-account p a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-wrapper .create-account p a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
