@@ -93,3 +93,10 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+.error-message {
+  text-align: center;
+  color: hsl(0, 100%, 50%);
+  font-size: 12px;
+  margin: 8px 0;
+}

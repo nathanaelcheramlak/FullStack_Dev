@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaLock, FaUser } from "react-icons/fa";
 import "./login.css";
@@ -5,11 +6,15 @@ import "./login.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
     try {
-      const response = await fetch("https://localhost:5000", {
+      const response = await fetch("http://127.0.0.1:5000/api/v1/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -19,18 +24,23 @@ const Login = () => {
           password,
         }),
       });
-
-      if (!response.ok) {
-        throw new Error(`Error: ${response.status}`);
+      const data = await response.json();
+      if (data.error) {
+        setErrorMessage(data.error);
+        setLoading(false);
+        return;
       }
-
-      const result = await response.json();
-      console.log("Login successful:", result);
-      // Handle success (e.g., navigate to another page or show a success message)
+      redirectToHomePage();
     } catch (error) {
-      console.error("Login failed:", error);
-      // Handle error (e.g., show an error message)
+      setErrorMessage("Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false);
     }
+  };
+
+  const redirectToHomePage = () => {
+    // Redirect to the Home page
+    navigate("/transaction");
   };
 
   return (
@@ -38,6 +48,7 @@ const Login = () => {
       <div className="login-wrapper">
         <h2 className="login-header">Login</h2>
         <hr />
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
         <form onSubmit={handleSubmit}>
           <div className="form">
             <input
@@ -62,13 +73,16 @@ const Login = () => {
           </div>
 
           <button type="submit" className="login-button">
-            Login
+            {loading ? "Loggin in..." : "Login"}
           </button>
         </form>
 
         <div className="create-account">
           <p>
-            Don't have an account? <a className="create">Create Account</a>
+            Don't have an account?{" "}
+            <a href="/register" className="create">
+              Create Account
+            </a>
           </p>
         </div>
       </div>

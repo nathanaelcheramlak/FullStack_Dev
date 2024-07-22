@@ -108,10 +108,10 @@ def login():
     
     user = storage.get('User', email=email)
     if not user:
-        return handle_error("User not found", 404)
+        return handle_error("No Account found, Register now", 404)
     
     if not check_password_hash(user.password, password):
-        return handle_error("Invalid credintials", 401)
+        return handle_error("Invalid email or password", 401)
     
     return jsonify(user.to_dict()), 200
 
