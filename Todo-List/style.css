@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+form input {
+  padding: 0.5rem;
+  flex: 2;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+}
+
+form button {
+  flex: 0.5;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: hsl(120, 100%, 25%);
+  border-radius: 0.25rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: hsl(120, 100%, 35%);
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 1rem;
+  margin-top: 1rem;
+}
+
+#header h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+#header button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: red;
+  border-radius: 0.25rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#header button:hover {
+  background-color: rgb(255, 73, 73);
+}
+
+ul > li {
+  width: 90%;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul > li:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+li > div {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+li > div > button {
+  outline: none;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: red;
+  height: 30px;
+  color: white;
+}
+
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+#progress-container {
+  text-align: center;
+  color: gray;
+}
+#no-todos {
+  text-align: center;
+  color: gray;
+  display: none;
+  font-size: 2rem;
+}
