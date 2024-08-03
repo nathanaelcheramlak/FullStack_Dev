@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(240, 64%, 27%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Mina", sans-serif;
+}
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+h2 {
+  margin-bottom: 0.5rem;
+}
+#choices-container {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+.choice {
+  background-color: hsl(230, 100%, 60%);
+  width: 50px;
+  height: 50px;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  border: 3px solid hsl(230, 100%, 65%);
+  border-radius: 1rem;
+  transition: all 0.35s;
+}
+.choice:hover {
+  background-color: hsl(230, 100%, 70%);
+}
+#grid-container {
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0.5rem;
+  width: 300px;
+  height: 300px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.cell {
+  background-color: hsl(230, 100%, 60%);
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cell:hover {
+  background-color: hsl(230, 100%, 65%);
+}
+#restart-btn {
+  width: 250px;
+  height: 40px;
+  font-size: 1.25rem;
+  background-color: hsl(230, 100%, 60%);
+  outline: none;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  color: white;
+  font-family: "Mina", sans-serif;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+#restart-btn:hover {
+  background-color: hsl(230, 100%, 65%);
+}
+.active-choice {
+  border: 3px solid hsl(230, 100%, 80%);
+}
